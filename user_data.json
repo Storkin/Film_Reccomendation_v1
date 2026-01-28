@@ -1,0 +1,28 @@
+{
+    "username": "necip",
+    "watched_films": {
+        "Inception": {
+            "rating": 9,
+            "review": "Harika bir film!",
+            "film": {
+                "title": "Inception",
+                "director": "Christopher Nolan",
+                "release_year": 2010,
+                "duration": 148,
+                "score": 8.8,
+                "genres": [
+                    "Action",
+                    "Sci-Fi",
+                    "Thriller"
+                ],
+                "cast": [
+                    "Leonardo DiCaprio",
+                    "Tom Hardy",
+                    "Joseph Gordon-Levitt"
+                ],
+                "language": "English",
+                "description": "A thief who steals corporate secrets through dream-sharing technology."
+            }
+        }
+    }
+}
