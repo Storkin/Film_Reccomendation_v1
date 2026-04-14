@@ -1,4 +1,4 @@
-# 🎬 CineTrack — Film Öneri ve Takip Uygulaması
+#  CineTrack — Film Öneri ve Takip Uygulaması
 
 IMDb Top 1000 listesini temel alan, nesne yönelimli Python backend ve modern web arayüzüne sahip tam yığın film yönetim uygulaması.
 
