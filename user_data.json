@@ -23,6 +23,52 @@
                 "language": "English",
                 "description": "A thief who steals corporate secrets through dream-sharing technology."
             }
+        },
+        "Fight Club": {
+            "film": {
+                "cast": [
+                    "Brad Pitt",
+                    "Edward Norton",
+                    "Meat Loaf",
+                    "Zach Grenier"
+                ],
+                "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more.",
+                "director": "David Fincher",
+                "duration": 139,
+                "genres": [
+                    "Drama"
+                ],
+                "language": "English",
+                "release_year": "1999",
+                "score": 8.8,
+                "title": "Fight Club"
+            },
+            "rating": null,
+            "review": null
+        },
+        "Schindler's List": {
+            "film": {
+                "cast": [
+                    "Liam Neeson",
+                    "Ralph Fiennes",
+                    "Ben Kingsley",
+                    "Caroline Goodall"
+                ],
+                "description": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+                "director": "Steven Spielberg",
+                "duration": 195,
+                "genres": [
+                    "Biography",
+                    " Drama",
+                    " History"
+                ],
+                "language": "English",
+                "release_year": "1993",
+                "score": 8.9,
+                "title": "Schindler's List"
+            },
+            "rating": null,
+            "review": null
         }
     }
 }

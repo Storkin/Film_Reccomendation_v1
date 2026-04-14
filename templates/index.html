@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineTrack - Film Öneri Motoru</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="nav-brand">
+        <span class="brand-icon">🎬</span>
+        <span class="brand-name">CineTrack</span>
+    </div>
+    <div class="nav-tabs">
+        <button class="nav-tab active" onclick="showPage('browse')">Filmler</button>
+        <button class="nav-tab" onclick="showPage('watchlist')">
+            İzlenenler <span class="badge" id="watched-badge">0</span>
+        </button>
+    </div>
+    <div class="nav-user">
+        <span class="user-icon">👤</span>
+        <span id="username-display">Kullanıcı</span>
+    </div>
+</nav>
+
+<!-- BROWSE PAGE -->
+<div id="page-browse" class="page active">
+    <!-- HERO -->
+    <div class="hero">
+        <h1>En İyi Filmleri Keşfet</h1>
+        <p>IMDb Top 1000 listesinden filtrele, izle, değerlendir.</p>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Film veya yönetmen ara..." oninput="debounceSearch()">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <!-- FILTERS -->
+    <div class="filters-bar">
+        <div class="filter-group">
+            <label>Tür</label>
+            <select id="genre-filter" onchange="applyFilters()">
+                <option value="">Tümü</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>Min. Puan</label>
+            <select id="score-filter" onchange="applyFilters()">
+                <option value="">Tümü</option>
+                <option value="9">9+</option>
+                <option value="8">8+</option>
+                <option value="7">7+</option>
+                <option value="6">6+</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label>Yıl</label>
+            <select id="year-filter" onchange="applyFilters()">
+                <option value="">Tümü</option>
+            </select>
+        </div>
+        <button class="btn-clear" onclick="clearFilters()">Temizle</button>
+        <span class="results-count" id="results-count"></span>
+    </div>
+
+    <!-- FILM GRID -->
+    <div class="film-grid" id="film-grid">
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Filmler yükleniyor...</p>
+        </div>
+    </div>
+</div>
+
+<!-- WATCHLIST PAGE -->
+<div id="page-watchlist" class="page">
+    <div class="watchlist-header">
+        <h2>İzlediğim Filmler</h2>
+        <p id="watchlist-subtitle">0 film</p>
+    </div>
+    <div class="film-grid" id="watchlist-grid">
+        <div class="empty-state">
+            <span>🎭</span>
+            <p>Henüz izlenen film yok.</p>
+            <button class="btn-primary" onclick="showPage('browse')">Film Keşfet</button>
+        </div>
+    </div>
+</div>
+
+<!-- FILM DETAIL MODAL -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+    <div class="modal" id="film-modal">
+        <button class="modal-close" onclick="closeModalDirect()">✕</button>
+        <div class="modal-body" id="modal-body"></div>
+    </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
